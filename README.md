@@ -20,8 +20,8 @@ const {
 const clearStorage = useFormDataToStorage<valuesTypes>({
 	watch,
 	setValue,
-	validate: false, // set shouldValidate  // see more on https://react-hook-form.com/api/useform/setvalue/ 
-	dirty: false, // set shouldDirty
+	validate: false, // set shouldValidate  (default false) // see more on https://react-hook-form.com/api/useform/setvalue/ 
+	dirty: false, // set shouldDirty (default false)
 	storage: localStorage // set storage local/session (default Local)
 	storageKey: "formData", // set storage key
 	fieldsToBeSaved: ["title", "firstName", "lastName", "email"], // set fields which be saved to storage
