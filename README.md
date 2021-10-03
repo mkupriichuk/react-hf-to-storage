@@ -2,7 +2,7 @@
 
 ## Usage
 
-```
+```typescript
 import { useForm } from "react-hook-form";
 import useFormDataToStorage from "../hooks/useFormDataToStorage";
 import { Person, validationSchema, valuesTypes} from "./types";
