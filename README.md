@@ -5,7 +5,7 @@
 ```typescript
 import { useForm } from "react-hook-form";
 import useFormDataToStorage from "../hooks/useFormDataToStorage";
-import { Person, validationSchema, valuesTypes} from "./types";
+import { Person, validationSchema, valuesTypes} from "./yupSchema";
 import { yupResolver } from "@hookform/resolvers/yup";
 
 const {
