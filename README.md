@@ -1,4 +1,4 @@
-# React hook for save data from react-hook-form to local/session storage
+# React hook for save data from react-hook-form to local/session storage (typescript friendly)
 
 ## Usage
 
