@@ -3,14 +3,19 @@
 ## Usage
 
 ```
+import { useForm } from "react-hook-form";
+import useFormDataToStorage from "../hooks/useFormDataToStorage";
+import { Person, validationSchema, valuesTypes} from "./types";
+import { yupResolver } from "@hookform/resolvers/yup";
+
 const {
-		register,
-		handleSubmit,
-		reset,
-		watch,
-		setValue,
-		formState: { errors },
-	} = useForm();
+	register,
+	handleSubmit,
+	reset,
+	watch,
+	setValue,
+	formState: { errors },
+} = useForm<Person>({ resolver: yupResolver(validationSchema) });
 
 const clearStorage = useFormDataToStorage<valuesTypes>({
 	watch,
@@ -22,7 +27,7 @@ const clearStorage = useFormDataToStorage<valuesTypes>({
 	clearStorageOnUnmount: false, // default true
 });
 
-function onSubmit(data) {
+function onSubmit(data: Person) {
 	alert(JSON.stringify(data, null, 4));
 	clearStorage();
 	reset();
