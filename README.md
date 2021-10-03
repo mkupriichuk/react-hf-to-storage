@@ -25,7 +25,7 @@ const clearStorage = useFormDataToStorage<valuesTypes>({
 	storage: localStorage // set storage local/session (default Local)
 	storageKey: "formData", // set storage key
 	fieldsToBeSaved: ["title", "firstName", "lastName", "email"], // set fields which be saved to storage
-	clearStorageOnUnmount: false, // default true
+	clearStorageOnUnmount: false, // clear storage on component unmaunt (default false)
 });
 
 function onSubmit(data: Person) {
